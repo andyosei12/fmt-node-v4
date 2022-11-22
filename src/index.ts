@@ -1,8 +1,9 @@
 import * as dotenv from "dotenv";
 dotenv.config();
+import config from "./config";
 
 import app from "./server";
 
-app.listen(8000, () => {
-  console.log("hello from serverside");
+app.listen(config.port, () => {
+  console.log(`hello from serverside at port ${config.port}`);
 });
